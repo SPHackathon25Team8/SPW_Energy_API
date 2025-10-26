@@ -1,0 +1,5 @@
+property==2.2
+uvicorn
+fastapi
+ecs-logging
+psycopg2-binary
