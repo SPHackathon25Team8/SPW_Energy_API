@@ -3,3 +3,5 @@ uvicorn
 fastapi
 ecs-logging
 psycopg2-binary
+requests
+boto3

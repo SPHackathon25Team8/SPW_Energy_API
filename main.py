@@ -64,13 +64,13 @@ ai_insights_day = [
   {
     "icon": "TrendingDown",
     "title": "Peak Usage: 6-9 PM",
-    "description": "Your highest energy consumption occurs during evening hours. Consider shifting laundry and dishwashing to off-peak times.",
+    "description": "AI : Your highest energy consumption occurs during evening hours. Consider shifting laundry and dishwashing to off-peak times.",
     "trend": "neutral"
   },
   {
     "icon": "Lightbulb",
     "title": "15% Below Average",
-    "description": "Great work! Your usage today is 15% lower than your typical daily consumption.",
+    "description": "AI : Great work! Your usage today is 15% lower than your typical daily consumption.",
     "trend": "down"
   }
 ];
@@ -79,19 +79,19 @@ ai_insights_week = [
   {
     "icon": "TrendingUp",
     "title": "Weekend Spike Detected",
-    "description": "Energy usage increased by 22% on weekends. Your HVAC system appears to be running more frequently.",
+    "description": "AI: Energy usage increased by 22% on weekends. Your HVAC system appears to be running more frequently.",
     "trend": "up"
   },
   {
     "icon": "Lightbulb",
     "title": "Consistent Night Usage",
-    "description": "Your baseline consumption between 12-6 AM is stable. No vampire power drains detected.",
+    "description": "AI : Your baseline consumption between 12-6 AM is stable. No vampire power drains detected.",
     "trend": "neutral"
   },
   {
     "icon": "TrendingDown",
     "title": "Midweek Efficiency",
-    "description": "Tuesday and Wednesday show optimal energy patterns. You saved £2.02 compared to other weekdays.",
+    "description": "AI : Tuesday and Wednesday show optimal energy patterns. You saved £2.02 compared to other weekdays.",
     "trend": "down"
   }
 ];
@@ -100,26 +100,27 @@ ai_insights_month =  [
   {
     "icon": "TrendingDown",
     "title": "8% Monthly Reduction",
-    "description": "This month you reduced consumption by 8% compared to last month. You're on track to save £24 annually.",
+    "description": "AI : This month you reduced consumption by 8% compared to last month. You're on track to save £24 annually.",
     "trend": "down"
   },
   {
     "icon": "Lightbulb",
     "title": "Weather Impact Analysis",
-    "description": "Cooler temperatures in week 3 reduced AC usage by 18%. Consider programmable thermostat adjustments.",
+    "description": "AI : Cooler temperatures in week 3 reduced AC usage by 18%. Consider programmable thermostat adjustments.",
     "trend": "neutral"
   },
   {
     "icon": "Calendar",
     "title": "Billing Cycle Forecast",
-    "description": "Based on current trends, your next bill will be approximately £142, down from £156 last month.",
+    "description": "AI : Based on current trends, your next bill will be approximately £142, down from £156 last month.",
     "trend": "down"
   }
 ];
 
 
 @app.get("/day", response_model=List[UsageEntry])
-def get_day_usage():
+def get_day_usage(devices: str= Query(...)):
+    print(devices)
     return day_data
 
 @app.get("/week", response_model=List[UsageWeekEntry])
