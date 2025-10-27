@@ -7,7 +7,7 @@ import boto3
 import json
 
 
-def get_usage(mode:str,data:list,devices:str) -> dict:
+def get_usage(mode:str,data:list,devices:str,energy_system_prompt:str) -> dict:
     correctedMode = ""
     if mode == "week":
         correctedMode = "day"
@@ -64,7 +64,9 @@ def get_usage(mode:str,data:list,devices:str) -> dict:
 
             return parsed
         except Exception as e:
+            print("EXCEPTION")
             print(str(e))
+            print("Exception returning ai_response")
             return {"ai_response": response_text}
 
     except Exception as e:

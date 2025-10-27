@@ -227,13 +227,12 @@ ai_insights_month =  [
 
 @app.get("/day", response_model=List[UsageEntry])
 def get_day_usage(devices: str= Query(...)):
-    print(devices)
     return day_data
 
 @app.get("/week", response_model=List[UsageWeekEntry])
 def get_week_usage(devices: str= Query(...)):
-    get_usage("week",week_data,devices)
-    return week_data
+    return get_usage("week",week_data,devices,energy_system_prompt)
+    ##return week_data
 
 @app.get("/month", response_model=List[UsageMonthEntry])
 def get_month_usage():
