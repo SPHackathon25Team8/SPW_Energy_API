@@ -3,7 +3,7 @@ import json
 
 # Use the inference profile instead of direct model ID
 endpoint = "https://bedrock-runtime.us-east-1.amazonaws.com/model/us.anthropic.claude-3-5-sonnet-20241022-v2:0/invoke"
-bearer_token = "ABSKQmVkcm9ja0FQSUtleS1tbDB4LWF0LTk5MjM4MjcwODM3NzpiS2FreU5KUG9iT0Mxak1tUmt3dW8venJDdzBSSEV1dFQ4anhYMDBxK2lvMDBmcEFZZ0xhZElacmZWQT0="
+bearer_token = "ABSKQmVkcm9ja0FQSUtleS1ibjRnLWF0LTk5MjM4MjcwODM3Nzo5OGJaMEsyckdCUUJ6Z09MeWczZGUwSS84cHg4RFpQanlpRjBlUUVDOVpNMjVHSko4MXNlaG1lY1pkcz0="
 
 payload = {
     "anthropic_version": "bedrock-2023-05-31",
