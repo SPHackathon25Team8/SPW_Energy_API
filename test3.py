@@ -4,7 +4,7 @@ from botocore.httpsession import URLLib3Session
 import json
 
 # Your bearer token and endpoint
-bearer_token = "ABSKQmVkcm9ja0FQSUtleS1ibjRnLWF0LTk5MjM4MjcwODM3Nzo5OGJaMEsyckdCUUJ6Z09MeWczZGUwSS84cHg4RFpQanlpRjBlUUVDOVpNMjVHSko4MXNlaG1lY1pkcz0="
+
 region = "us-east-1"
 model_id = "anthropic.claude-3-haiku:1"
 endpoint = f"https://bedrock-runtime.{region}.amazonaws.com/model/{model_id}/invoke"
